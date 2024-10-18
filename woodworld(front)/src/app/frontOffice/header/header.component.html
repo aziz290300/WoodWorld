@@ -1,0 +1,65 @@
+<div class="top2_wrapper" id="top2">
+  <div class="container">
+      <div class="top2 clearfix">
+          <header>
+              <div class="logo_wrapper">
+                  <a routerLink="/WoodWorld" class="logo scroll-to">
+                      <img src="assets/images/wwlg.png" alt="" class="img-responsive" width="9%" height="auto">
+                  </a>
+              </div>
+          </header>
+          <div class="navbar navbar_ navbar-default">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                      data-target=".navbar-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <div class="navbar-collapse navbar-collapse_ collapse">
+                  <ul class="nav navbar-nav sf-menu clearfix">
+                      <li class="active"><a routerLink="/WoodWorld">Home</a></li>
+                      <li><a href="#about">About us</a></li>
+                      <li><a href="#services">Services</a></li>
+                      <li class="sub-menu sub-menu-1"><a href="#">Sections<em></em></a>
+                          <ul>
+                              <li><a href="#department">Design Department</a></li>
+                              <li><a href="#features">Features</a></li>
+                              <li><a href="#difference">Difference</a></li>
+                              <li><a href="#pricelist">Pricelist</a></li>
+                              <li><a href="#gallery">Mock-up</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="gallery.html">Gallery</a></li>
+                      <li class="sub-menu sub-menu-1"><a href="blog.html">Blog<em></em></a>
+                          <ul>
+                              <li><a href="blog.html">Left Blog</a></li>
+                              <li><a href="blog-right.html">Right Blog</a></li>
+                              <li><a href="post.html">Blog post 2 columns</a></li>
+                              <li><a href="post-full.html">Blog post 1 column</a></li>
+                          </ul>
+                      </li>
+                      <li><a routerLink="/contacts">Contact us</a></li>
+
+                      <!-- Icône Panier placée comme les autres éléments du menu -->
+<li class="cart-menu-item">
+  <a routerLink="/cart">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+          <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+      </svg>
+      <span class="cart-count">{{ cartItemCount }}</span>
+  </a>
+</li>
+
+
+                      <!-- Bouton Login/Logout intégré dans la navigation -->
+                      <li class="navbar-right">
+                          <button *ngIf="!isLoggedIn" (click)="login()" class="btn btn-default navbar-btn">Login</button>
+                          <button *ngIf="isLoggedIn" (click)="logout()" class="btn btn-default navbar-btn">Logout</button>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
