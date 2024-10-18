@@ -7,6 +7,8 @@ import { Produit, CartItem } from 'src/app/models/produit';  // Assurez-vous que
 })
 export class CartService {
 
+ 
+
   private cart: CartItem[] = [];  // Le panier avec les produits
   private cartSubject = new BehaviorSubject<CartItem[]>([]);  // Pour notifier des changements
 

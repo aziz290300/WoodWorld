@@ -1,0 +1,18 @@
+
+
+    .image-row {
+        display: flex;           /* Utilisation de Flexbox pour aligner les images */
+        justify-content: space-between; /* Espacement entre les images */
+    }
+
+    .image-container {
+        flex: 1;                 /* Les images occupent une largeur égale */
+        padding: 0 10px;         /* Ajout d'un peu d'espace entre les images */
+    }
+
+    .carousel-image {
+        width: 100%;             /* L'image occupe toute la largeur du conteneur */
+        height: auto;            /* La hauteur s'ajuste automatiquement pour garder les proportions */
+        object-fit: cover;       /* Ajuste l'image pour couvrir l'espace sans la déformer */
+    }
+
