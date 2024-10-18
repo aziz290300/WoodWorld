@@ -34,7 +34,7 @@ public class ProduitServiceImpl implements IProduitService {
             existingProduit.setName(produit.getName());
             existingProduit.setHome(produit.getHome());
             existingProduit.setImages(produit.getImages());
-
+            existingProduit.setDescription(produit.getDescription());
             existingProduit.setSize(produit.getSize());
             existingProduit.setPrice(produit.getPrice());
             existingProduit.setStock(produit.getStock());

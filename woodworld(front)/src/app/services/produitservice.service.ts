@@ -51,13 +51,30 @@ export class ProduitserviceService {
   }
 
   // Mettre à jour un produit
-  updateProduit(produit: Produit): Observable<Produit> {
-    return this.http.put<Produit>(`${this.baseUrl}update`, produit);
+  updateProduit(produit: Produit, files: File[]): Observable<any> {
+    const formData: FormData = new FormData();
+  
+    // Sérialiser le produit en JSON
+    formData.append('produit', JSON.stringify(produit));
+  
+    // Ajouter les fichiers au FormData, s'il y en a
+    files.forEach((file, index) => {
+      formData.append('files', file, file.name);
+    });
+  
+    return this.http.put(`${this.baseUrl}update`, formData, {
+      headers: new HttpHeaders({}),
+      responseType: 'text'  // Si l'API renvoie une chaîne de caractères
+    });
   }
+  
 
   // Mettre à jour les images d'un produit
   updateImages(imageData: ImageData): Observable<ImageData> {
     return this.http.put<ImageData>(`${this.baseUrl}updateImgs`, imageData);
+  }
+  public getImageUrl(fileName: string): string {
+    return `http://localhost:8085/image/${fileName}`;
   }
  
 }

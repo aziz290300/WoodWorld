@@ -15,7 +15,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './frontOffice/header/header.component';
 import { AddproduitComponent } from './components/produit/addproduit/addproduit.component';
-import { ProduitComponent } from './components/produit/produit.component';
+import { ProduitComponent } from './components/produit/dashboardproduit/produit.component';
+import { UpdateproduitComponent } from './components/updateproduit/updateproduit.component';
+import { AdminproduitComponent } from './components/produit/adminproduit/adminproduit.component';
+import { DetailproduitComponent } from './components/produit/detailproduit/detailproduit.component';
+
 
 
 
@@ -32,7 +36,10 @@ import { ProduitComponent } from './components/produit/produit.component';
     RegisterComponent,
     HeaderComponent,
     AddproduitComponent,
-    ProduitComponent
+  ProduitComponent,
+  UpdateproduitComponent,
+  AdminproduitComponent,
+  DetailproduitComponent
   ],
   imports: [
     BrowserModule,

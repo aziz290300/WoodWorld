@@ -2,6 +2,7 @@ import { FileHandle } from "./FileHandle";
 export class Produit {
     id: number;
     name: string;
+    description: string;
     price: number;
     woodtypes: Woodtypes;
     size: Size;
@@ -16,6 +17,7 @@ export class Produit {
     constructor() {
       this.id = 0;
       this.name = '';
+      this.description = '';
       this.price = 0;
       this.woodtypes = Woodtypes.TYPE1; // Ajustez cette valeur selon vos besoins
       this.size = Size.SMALL;           // Ajustez cette valeur selon vos besoins

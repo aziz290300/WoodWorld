@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div *ngIf="produit" class="card">
+  <div class="card__title">
+    <div class="icon">
+      <a href="#"><i class="fa fa-arrow-left"></i></a>
+    </div>
+    <h3>{{ produit.typesproduit }}</h3>
+  </div>
+
+  <div class="card__body">
+    <div class="half">
+      <div class="featured_text">
+        <h1>{{ produit.name }}</h1>
+        <p class="sub">{{ produit.souscategory }}</p>
+        <p class="price">{{ produit.price | currency }}</p>
+      </div>
+      <div class="image-gallery">
+        <div *ngFor="let img of produit.images" class="image-wrapper">
+          <img [src]="img.url" class="img-responsive product-image" alt="{{ produit.name }}">
+        </div>
+      </div>
+    </div>
+
+    <div class="half">
+      <div class="description">
+        <p>{{ produit.description }}</p>
+      </div>
+
+      <div class="product-details">
+      
+        <p><strong>Type de bois:</strong> {{ produit.woodtypes }}</p>
+        <p><strong>Taille:</strong> {{ produit.size }}</p>
+        <p><strong>Stock:</strong> {{ produit.stock === 'INSTOCK' ? 'En stock' : 'Rupture de stock' }}</p>
+        <p><strong>Catégorie:</strong> {{ produit.category }}</p>
+        <p><strong>Sous-catégorie:</strong> {{ produit.souscategory }}</p>
+        <p><strong>Maison:</strong> {{ produit.home }}</p>
+        <p><strong>Type de produit:</strong> {{ produit.typesproduit }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card__footer">
+    <div class="recommend">
+      <p>Recommandé par</p>
+      <h3>Wood World</h3>
+    </div>
+    <div class="action">
+      <button type="button">Ajouter au panier</button>
+    </div>
+  </div>
+</div>

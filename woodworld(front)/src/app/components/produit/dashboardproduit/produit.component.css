@@ -1,0 +1,230 @@
+/* Global Styles */
+body {
+    background: #e2eaef;
+    font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+    color: #000;
+    font-size: 26px;
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    margin: 30px 0 60px;
+}
+
+h2::after {
+    content: "";
+    width: 100px;
+    position: absolute;
+    margin: 0 auto;
+    height: 4px;
+    border-radius: 1px;
+    background: #7ac400;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+}
+
+/* Carousel Styling */
+.carousel {
+    margin: 50px auto;
+    padding: 0 70px;
+}
+
+.carousel .item {
+    color: #747d89;
+    min-height: 350px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel .thumb-wrapper {
+    padding: 25px 15px;
+    background: #fff;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+    transition: transform 0.7s;
+    width: 100%; /* S'assurer que toutes les cartes occupent toute la largeur disponible */
+    height: 400px; /* Hauteur fixe pour uniformiser toutes les cartes */
+}
+
+.carousel .thumb-wrapper:hover {
+    transform: scale(1.05); /* Effet de zoom global */
+}
+
+.carousel .item .img-box {
+    height: 200px; /* Hauteur fixe pour uniformiser la taille des images */
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel .item img {
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0.9;
+    transition: transform 0.5s;
+    border-radius: 10px; /* Légère bordure arrondie */
+}
+
+.carousel .thumb-wrapper:hover img {
+    transform: scale(1.2); /* Zoom sur l'image uniquement */
+}
+
+.carousel .item h4 {
+    font-size: 18px;
+}
+
+.carousel .item h4,
+.carousel .item p,
+.carousel .item ul {
+    margin-bottom: 5px;
+}
+
+.carousel .thumb-content .btn {
+    color: #7ac400;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: none;
+    border: 1px solid #7ac400;
+    padding: 6px 14px;
+    margin-top: 5px;
+    line-height: 16px;
+    border-radius: 20px;
+}
+
+.carousel .thumb-content .btn:hover,
+.carousel .thumb-content .btn:focus {
+    color: #fff;
+    background: #7ac400;
+    box-shadow: none;
+}
+
+.carousel .thumb-content .btn i {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.carousel .carousel-control {
+    height: 44px;
+    width: 40px;
+    background: #7ac400;
+    margin: auto 0;
+    border-radius: 4px;
+    opacity: 0.8;
+}
+
+.carousel .carousel-control:hover {
+    background: #78bf00;
+    opacity: 1;
+}
+
+.carousel .carousel-control i {
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    display: inline-block;
+    margin: -19px 0 0 0;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    color: #fff;
+    text-shadow: none;
+    font-weight: bold;
+}
+
+.carousel .item-price {
+    font-size: 13px;
+    padding: 2px 0;
+}
+
+.carousel .item-price strike {
+    opacity: 0.7;
+    margin-right: 5px;
+}
+
+/* Image zoom effect */
+.card {
+    position: relative;
+    transition: transform 0.7s;
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background: white;
+    width: 100%; /* La largeur des cartes est basée sur la taille de la colonne parent */
+    height: auto;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Légère mise en valeur de la carte */
+}
+
+.card header {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    padding: 1px;
+    border-radius: 25px;
+    width: 450px;
+    height: 90px;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+.card:hover > header {
+    opacity: 1;
+    transform: translateY(-120px);
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .carousel .col-sm-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .carousel {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel .col-sm-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .carousel {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel .col-sm-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .carousel {
+        padding: 0 10px;
+    }
+
+    .carousel .thumb-wrapper {
+        height: auto;
+    }
+}

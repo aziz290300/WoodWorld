@@ -52,7 +52,7 @@ export class AddproduitComponent {
     this.produitService.addProduit(this.produit, this.selectedFiles).subscribe(
       response => {
         console.log('Produit ajouté avec succès :', response);
-        this.router.navigate(['/produits']);
+        this.router.navigate(['admin/produits']);
       },
       error => {
         console.error('Erreur lors de l\'ajout du produit :', error);

@@ -56,6 +56,7 @@ public class ProduitController {
     public List<ImageData> uploadImage(MultipartFile[] multipartFiles) throws IOException {
         List<ImageData> imageDatas = new ArrayList<>();
         for (MultipartFile file: multipartFiles) {
+            System.out.println("Fichier reçu : " + file.getOriginalFilename()); // Log pour le debug
             ImageData imageData = new ImageData(
                     file.getOriginalFilename(),
                     file.getContentType(),
@@ -63,11 +64,10 @@ public class ProduitController {
             );
             imageDatas.add(imageData);
         }
-
-
         return imageDatas;
     }
-    @PostMapping(value = "/addproduit", produces = {"text/plain", "application/json"}, consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+
+    @PostMapping(value = "/addproduit", produces = {"text/plain", "application/json"}, consumes = {"multipart/mixed",MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<String> addProduit(
             @RequestPart("produit") String produitJson,
             @RequestPart("file") MultipartFile[] file) {
@@ -92,11 +92,33 @@ public class ProduitController {
 
 
 
-    @PutMapping("/update")
-    public ResponseEntity<Produit> updateOrdonnance(@RequestBody Produit produit) {
-        Produit updateProduit = dossierMedicalService.updateProduit(produit);
-        return ResponseEntity.ok(updateProduit);
+    @PutMapping(value = "/update", produces = {"text/plain", "application/json"}, consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
+    public ResponseEntity<String> updateProduit(
+            @RequestPart("produit") String produitJson,
+            @RequestPart(value = "files", required = false) MultipartFile[] files) {
+        try {
+            // Désérialisation du produit à partir du JSON
+            System.out.println("Produit JSON reçu : " + produitJson);  // Log pour le debug
+            ObjectMapper objectMapper = new ObjectMapper();
+            Produit produit = objectMapper.readValue(produitJson, Produit.class);
+
+            // Si des fichiers sont fournis, gérer la mise à jour des images
+            if (files != null && files.length > 0) {
+                List<ImageData> images = uploadImage(files);  // Fonction pour gérer les fichiers
+                produit.setImages(images);
+            }
+
+            // Mise à jour du produit
+            Produit updatedProduit = dossierMedicalService.updateProduit(produit);
+
+            return ResponseEntity.ok("Produit mis à jour avec succès");
+        } catch (Exception e) {
+            e.printStackTrace(); // Afficher la trace des erreurs dans les logs
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Erreur lors de la mise à jour du produit : " + e.getMessage());
+        }
     }
+
+
 
 
 }

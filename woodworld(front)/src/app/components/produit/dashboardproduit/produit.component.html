@@ -4,15 +4,12 @@
         <div class="col-md-12">
             <h2>Featured <b>Products</b></h2>
             <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
-                <!-- Carousel indicators -->
+                <!-- Carousel Indicators -->
                 <ol class="carousel-indicators">
-                    <li *ngFor="let produit of produits; let i = index"
-                        [class.active]="i === 0"
-                        data-target="#myCarousel"
-                        [attr.data-slide-to]="i"></li>
+                    <li *ngFor="let produit of produits; let i = index" [class.active]="i === 0" data-target="#myCarousel" [attr.data-slide-to]="i"></li>
                 </ol>
-
-                <!-- Wrapper for carousel items -->
+                
+                <!-- Carousel Items -->
                 <div class="carousel-inner">
                     <div *ngFor="let produit of produits; let i = index" [class.active]="i === 0" class="item">
                         <div class="row">
@@ -22,7 +19,6 @@
                                     <div class="img-box">
                                         <img *ngFor="let img of item.images" [src]="img.url" class="img-responsive" alt="Image">
                                     </div>
-                                    
                                     <div class="thumb-content">
                                         <h4>{{ item.name }}</h4>
                                         <div class="star-rating">
@@ -33,10 +29,9 @@
                                             </ul>
                                         </div>
                                         <p class="item-price">
-                                         
-                                            <b>{{ item.price| currency }}</b>
+                                            <b>{{ item.price | currency }}</b>
                                         </p>
-                                        <a href="#" class="btn btn-primary">Add to Cart</a>
+                                        <a [routerLink]="['/produit-detail', item.id]" class="btn btn-primary">View Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -44,7 +39,7 @@
                     </div>
                 </div>
 
-                <!-- Carousel controls -->
+                <!-- Carousel Controls -->
                 <a class="carousel-control left" href="#myCarousel" data-slide="prev">
                     <i class="fa fa-chevron-left"></i>
                 </a>

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300');
+
+/* General styles */
+.card {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card__title {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.icon {
+  flex: 1;
+  color: #115dd8;
+}
+
+.icon a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Card body with image on the left and details on the right */
+.card__body {
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* Spacing between image and details */
+}
+
+.image-wrapper {
+  flex: 1; /* Ensures image takes up half the space */
+  max-width: 50%; /* Set max-width to 50% of the card */
+}
+
+.image-gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.details-wrapper {
+  flex: 1; /* Ensures details take up the other half of the space */
+  padding-left: 20px;
+}
+
+/* Product details */
+.featured_text h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px; /* Augmenter la taille du titre */
+  font-weight: 800;
+}
+
+.featured_text p.sub {
+  font-size: 24px; /* Agrandir la taille de la sous-catégorie */
+  color: #686e77;
+  font-weight: 600;
+}
+
+.featured_text p.price {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 30px; /* Agrandir la taille du prix */
+  color: #252525;
+}
+
+.description p {
+  font-family: "Open Sans", sans-serif;
+  color: #555;
+  line-height: 1.8; /* Augmenter l'espacement entre les lignes pour une meilleure lisibilité */
+  margin-top: 20px;
+  font-size: 18px; /* Agrandir la taille de la description */
+}
+
+.product-details strong {
+  color: #007bff;
+}
+
+.product-details p {
+  margin: 10px 0; /* Augmenter l'espacement vertical */
+  font-family: "Open Sans", sans-serif;
+  color: #555;
+  font-size: 18px; /* Agrandir la taille des détails du produit */
+}
+
+.stock {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 18px; /* Agrandir la taille de la mention de stock */
+}
+
+.stock i {
+  margin-right: 8px;
+}
+
+.card__footer {
+  padding: 20px;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommend p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  color: #555;
+  font-size: 18px; /* Agrandir la taille de la mention de recommandation */
+}
+
+.recommend h3 {
+  color: #115dd8;
+  font-size: 20px; /* Agrandir la taille du titre de recommandation */
+}
+
+.action button {
+  border: 1px solid #115dd8;
+  padding: 12px 24px;
+  border-radius: 50px;
+  background-color: #115dd8;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.action button:hover {
+  background-color: #fff;
+  color: #115dd8;
+}
