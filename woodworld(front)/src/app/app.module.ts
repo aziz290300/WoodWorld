@@ -14,8 +14,18 @@ import { RegisterComponent } from './auth/register/register.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './frontOffice/header/header.component';
+<<<<<<< HEAD
 import { CartComponent } from './frontOffice/cart/cart.component';
 import { FooterComponent } from './frontOffice/footer/footer.component';
+=======
+import { AddproduitComponent } from './components/produit/addproduit/addproduit.component';
+import { ProduitComponent } from './components/produit/dashboardproduit/produit.component';
+import { UpdateproduitComponent } from './components/updateproduit/updateproduit.component';
+import { AdminproduitComponent } from './components/produit/adminproduit/adminproduit.component';
+import { DetailproduitComponent } from './components/produit/detailproduit/detailproduit.component';
+
+
+>>>>>>> aziz
 
 
 @NgModule({
@@ -30,8 +40,16 @@ import { FooterComponent } from './frontOffice/footer/footer.component';
     LoginComponent,
     RegisterComponent,
     HeaderComponent,
+<<<<<<< HEAD
     CartComponent,
     FooterComponent,
+=======
+    AddproduitComponent,
+  ProduitComponent,
+  UpdateproduitComponent,
+  AdminproduitComponent,
+  DetailproduitComponent
+>>>>>>> aziz
   ],
   imports: [
     BrowserModule,

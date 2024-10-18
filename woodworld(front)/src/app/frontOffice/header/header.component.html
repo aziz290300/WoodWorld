@@ -1,4 +1,5 @@
 <div class="top2_wrapper" id="top2">
+<<<<<<< HEAD
   <div class="container">
       <div class="top2 clearfix">
           <header>
@@ -63,3 +64,58 @@
       </div>
   </div>
 </div>
+=======
+    <div class="container">
+        <div class="top2 clearfix">
+            <header>
+                <div class="logo_wrapper">
+                    <a routerLink="/WoodWorld" class="logo scroll-to">
+                        <img src="assets/images/logo.png" alt="" class="img-responsive">
+                    </a>
+                </div>
+            </header>
+            <div class="navbar navbar_ navbar-default">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="navbar-collapse navbar-collapse_ collapse">
+                    <ul class="nav navbar-nav sf-menu clearfix">
+                        <li class="active"><a routerLink="/WoodWorld">Home</a></li>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li class="sub-menu sub-menu-1"><a href="#">Sections<em></em></a>
+                            <ul>
+                                <li><a href="#department">Design Department</a></li>
+                                <li><a href="#features">Features</a></li>
+                                <li><a href="#difference">Difference</a></li>
+                                <li><a href="#pricelist">Pricelist</a></li>
+                                <li><a href="#gallery">Mock-up</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li class="sub-menu sub-menu-1"><a href="blog.html">Blog<em></em></a>
+                            <ul>
+                                <li><a href="blog.html">Left Blog</a></li>
+                                <li><a href="blog-right.html">Right Blog</a></li>
+                                <li><a href="post.html">blog post 2 columns</a></li>
+                                <li><a href="post-full.html">blog post 1 column</a></li>
+                            </ul>
+                        </li>
+                        <li><a routerLink="/contacts">Contact us</a></li>
+                        
+                    </ul>
+                    <div class="navbar-right">
+                        <button *ngIf="!isLoggedIn" (click)="login()" class="btn btn-default">Login</button>
+                        <button *ngIf="isLoggedIn" (click)="logout()" class="btn btn-default">Logout</button>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+>>>>>>> aziz

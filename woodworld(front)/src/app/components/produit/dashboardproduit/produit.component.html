@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Featured <b>Products</b></h2>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                <!-- Carousel Indicators -->
+                <ol class="carousel-indicators">
+                    <li *ngFor="let produit of produits; let i = index" [class.active]="i === 0" data-target="#myCarousel" [attr.data-slide-to]="i"></li>
+                </ol>
+                
+                <!-- Carousel Items -->
+                <div class="carousel-inner">
+                    <div *ngFor="let produit of produits; let i = index" [class.active]="i === 0" class="item">
+                        <div class="row">
+                            <div class="col-sm-3" *ngFor="let item of produits.slice(i * 4, (i + 1) * 4)">
+                                <div class="thumb-wrapper">
+                                    <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                                    <div class="img-box">
+                                        <img *ngFor="let img of item.images" [src]="img.url" class="img-responsive" alt="Image">
+                                    </div>
+                                    <div class="thumb-content">
+                                        <h4>{{ item.name }}</h4>
+                                        <div class="star-rating">
+                                            <ul class="list-inline">
+                                                <li class="list-inline-item" *ngFor="let star of [].constructor(5); let j = index">
+                                                    <i [class]="(j < 5) ? 'fa fa-star' : 'fa fa-star-o'"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <p class="item-price">
+                                            <b>{{ item.price | currency }}</b>
+                                        </p>
+                                        <a [routerLink]="['/produit-detail', item.id]" class="btn btn-primary">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                    <i class="fa fa-chevron-left"></i>
+                </a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                    <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

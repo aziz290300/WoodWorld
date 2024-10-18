@@ -1,13 +1,19 @@
 package com.example.ww.Entities;
 
+<<<<<<< HEAD
 import com.fasterxml.jackson.annotation.JsonIgnore;
+=======
+>>>>>>> aziz
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
 import java.time.LocalDate;
+<<<<<<< HEAD
 import java.util.List;
+=======
+>>>>>>> aziz
 
 @Entity
 @Getter
@@ -41,9 +47,12 @@ public class User {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+<<<<<<< HEAD
     @OneToMany
     private List<Commande> commandes;
 
+=======
+>>>>>>> aziz
 
 
 }
