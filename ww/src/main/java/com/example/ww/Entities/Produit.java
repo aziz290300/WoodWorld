@@ -17,10 +17,9 @@ public class Produit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-<<<<<<< HEAD
-=======
+
     private String description;
->>>>>>> aziz
+
     private long price;
     @Enumerated(EnumType.STRING)
     private woodtypes woodtypes ;
@@ -36,10 +35,10 @@ public class Produit {
     private home home ;
     @Enumerated(EnumType.STRING)
     private category category ;
-<<<<<<< HEAD
+
     @ManyToMany
     private List<Commande> commandes;
-=======
+
     private String imageURL;
 
     @ManyToMany(
@@ -57,5 +56,4 @@ public class Produit {
     public List<ImageData> images;
 
 
->>>>>>> aziz
 }

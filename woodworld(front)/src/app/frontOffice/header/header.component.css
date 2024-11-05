@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .cart-menu-item {
   position: relative;
 }
@@ -16,12 +15,4 @@
 
 .navbar-right .btn {
   margin-left: 10px;
-=======
-.navbar-right {
-    margin-left: auto;
-}
-
-.btn {
-    margin-left: 15px; /* Space between buttons */
->>>>>>> aziz
 }

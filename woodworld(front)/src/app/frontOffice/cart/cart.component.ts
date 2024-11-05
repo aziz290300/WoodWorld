@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CartItem } from 'src/app/models/produit';
+import { CartItem } from 'src/app/models/Produit';
 import { CartService } from '../Service/carte.service';
 
 @Component({

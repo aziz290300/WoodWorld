@@ -1,6 +1,6 @@
 package com.example.ww.Entities;
 
-<<<<<<< HEAD
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
@@ -8,14 +8,14 @@ import lombok.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
-=======
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
->>>>>>> aziz
+
 @Entity
 @Getter
 @Setter
@@ -28,7 +28,7 @@ public class Commande {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-<<<<<<< HEAD
+
 
     private LocalDateTime dateCommande;
 
@@ -52,6 +52,4 @@ public class Commande {
     @CollectionTable(name = "produit_quantites", joinColumns = @JoinColumn(name = "commande_id"))
     @Column(name = "quantite")
     private List<Integer> quantites;
-=======
->>>>>>> aziz
 }

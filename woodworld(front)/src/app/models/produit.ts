@@ -13,6 +13,7 @@ export class Produit {
     category: Category;
     imageURL: string;
     images: FileHandle[];
+    commande?: Commande[];
   
     constructor() {
       this.id = 0;
@@ -85,5 +86,17 @@ export class Produit {
       this.fileType = '';
       this.data = null;
     }
+    
   }
+  export interface Commande {
+    id: number; // Par exemple, id de la commande
+    // Ajoute d'autres propriétés de la commande ici
+  }
+  
+  // produit.ts
+  export interface CartItem {
+    produit: Produit;  // Produit associé
+    quantity: number;  // Quantité
+  }
+  
   
