@@ -1,0 +1,33 @@
+<div class="reclamation-list-container">
+    <h2>Liste des Réclamations</h2>
+  
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
+    <table class="reclamation-table" *ngIf="reclamations.length > 0; else noReclamations">
+      <thead>
+        <tr>
+          <th>Description</th>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reclamation of reclamations">
+          <td>{{ reclamation.description }}</td>
+          <td>{{ reclamation.datereclamation | date: 'shortDate' }}</td>
+          <td>{{ reclamation.typeReclamation }}</td>
+          <td>
+            <button (click)="respondToReclamation(reclamation.idreclamation)" class="btn-repondre">
+              Répondre
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <ng-template #noReclamations>
+      <p>Aucune réclamation disponible.</p>
+    </ng-template>
+  </div>
+  

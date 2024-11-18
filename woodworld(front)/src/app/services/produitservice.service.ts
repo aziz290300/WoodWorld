@@ -9,7 +9,7 @@ import { FileHandle } from '../models/FileHandle'; // Votre modèle Angular pour
 })
 export class ProduitserviceService {
 
-  private baseUrl: string = 'http://localhost:8085/spring/Produit/';
+  private baseUrl: string = 'http://localhost:8085/Produit/';
 
   constructor(private http: HttpClient) {}
 

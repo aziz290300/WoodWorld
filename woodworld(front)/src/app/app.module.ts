@@ -24,6 +24,13 @@ import { UpdateproduitComponent } from './components/updateproduit/updateproduit
 import { AdminproduitComponent } from './components/produit/adminproduit/adminproduit.component';
 import { DetailproduitComponent } from './components/produit/detailproduit/detailproduit.component';
 
+import { AddReclamationComponent } from './components/reclamation/add-reclamation/add-reclamation.component';
+import { UpdateReclamationComponent } from './components/reclamation/update-reclamation/update-reclamation.component';
+import { DashboardReclamationComponent } from './components/reclamation/dashboard-reclamation/dashboard-reclamation.component';
+import { ReponseComponent } from './components/reponse/reponse.component';
+import { ReponseFormComponent } from './components/reponse/reponse-form/reponse-form.component';
+import { AnswerlistComponent } from './components/reponse/answerlist/answerlist.component';
+import { ViewReponseComponent } from './components/reclamation/view-reponse/view-reponse.component';
 
 
 
@@ -48,8 +55,16 @@ import { DetailproduitComponent } from './components/produit/detailproduit/detai
   ProduitComponent,
   UpdateproduitComponent,
   AdminproduitComponent,
-  DetailproduitComponent
+  DetailproduitComponent,
 
+  AddReclamationComponent,
+  UpdateReclamationComponent,
+  DashboardReclamationComponent,
+  ReponseComponent,
+  ReponseFormComponent,
+  AnswerlistComponent,
+  ViewReponseComponent,
+  
   ],
   imports: [
     BrowserModule,

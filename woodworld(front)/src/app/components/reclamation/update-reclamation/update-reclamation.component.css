@@ -1,0 +1,92 @@
+/* Conteneur principal pour le formulaire de mise à jour de réclamation */
+.update-reclamation {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre de la page */
+  .update-reclamation h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Style du formulaire */
+  .update-reclamation form {
+    display: grid;
+    gap: 20px;
+  }
+  
+  /* Style des labels */
+  .update-reclamation label {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+  }
+  
+  /* Champs de saisie (input et select) */
+  .update-reclamation input,
+  .update-reclamation select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+  }
+  
+  /* Focus sur les champs de saisie */
+  .update-reclamation input:focus,
+  .update-reclamation select:focus {
+    border-color: #4caf50;
+    outline: none;
+  }
+  
+  /* Bouton de soumission */
+  .update-reclamation button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  /* Effet de survol pour le bouton */
+  .update-reclamation button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Footer */
+  app-footer {
+    margin-top: 50px;
+  }
+  
+  /* Responsive pour les petits écrans */
+  @media (max-width: 768px) {
+    .update-reclamation {
+      padding: 15px;
+    }
+  
+    .update-reclamation h2 {
+      font-size: 24px;
+    }
+  
+    .update-reclamation input,
+    .update-reclamation select,
+    .update-reclamation button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

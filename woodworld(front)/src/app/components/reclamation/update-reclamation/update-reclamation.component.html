@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="update-reclamation">
+    <h2>Modifier une Réclamation</h2>
+    <form (ngSubmit)="onSubmit()">
+      <label for="description">Description:</label>
+      <input type="text" id="description" [(ngModel)]="reclamation.description" name="description" required />
+  
+      <label for="type">Type:</label>
+      <select id="type" [(ngModel)]="reclamation.typeReclamation" name="type">
+        <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+      </select>
+  
+      <label for="date">Date :</label>
+      <input type="date" id="date" [(ngModel)]="reclamation.datereclamation" name="date" [value]="currentDate" required />
+      <button type="submit">Mettre à jour</button>
+    </form>
+  </div>
+  <app-footer></app-footer>

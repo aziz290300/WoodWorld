@@ -1,0 +1,28 @@
+<app-header></app-header>
+<div class="dashboard-reclamation">
+  <h2>Liste des Réclamations</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Description</th>
+        <th>Type</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let reclamation of reclamations">
+        <td>{{ reclamation.description }}</td>
+        <td>{{ reclamation.typeReclamation }}</td>
+        <td>{{ reclamation.datereclamation }}</td>
+        <td>
+          <button (click)="onUpdate(reclamation.idreclamation)">Modifier</button>
+          <button (click)="onDelete(reclamation.idreclamation)">Supprimer</button>
+          <!-- Nouveau bouton pour voir la réponse -->
+          <button (click)="onCheckReponse(reclamation.idreclamation)">Check Réponse</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<app-footer></app-footer>

@@ -48,7 +48,8 @@ public class User {
     @OneToMany
     private List<Commande> commandes;
 
-
+    @OneToOne
+    Reclamation reclamation;
 
 
 }

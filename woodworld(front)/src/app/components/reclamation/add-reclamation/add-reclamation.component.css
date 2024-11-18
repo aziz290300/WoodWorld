@@ -1,0 +1,101 @@
+/* Style global pour la page */
+.add-reclamation {
+    max-width: 900px; /* Largeur mise à jour pour correspondre à "update-reclamation" */
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff; /* Fond blanc pour correspondre à l'update */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre de la page */
+  .add-reclamation h2 {
+    font-size: 28px; /* Augmentation de la taille du titre pour correspondre à l'update */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Style du formulaire */
+  .add-reclamation form {
+    display: grid; /* Grille pour une meilleure organisation des éléments */
+    gap: 20px;
+  }
+  
+  /* Style des labels */
+  .add-reclamation label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+  }
+  
+  /* Style des champs de saisie */
+  .add-reclamation input,
+  .add-reclamation select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+  }
+  
+  /* Focus sur les champs de saisie */
+  .add-reclamation input:focus,
+  .add-reclamation select:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+  }
+  
+  /* Style du bouton de soumission */
+  .add-reclamation button {
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Effet de survol pour le bouton */
+  .add-reclamation button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Style pour les messages d'erreur ou d'avertissement */
+  .add-reclamation .error {
+    color: #f44336;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Footer */
+  app-footer {
+    margin-top: 50px;
+  }
+  
+  /* Responsive pour les petits écrans */
+  @media (max-width: 768px) {
+    .add-reclamation {
+      padding: 15px;
+    }
+  
+    .add-reclamation h2 {
+      font-size: 24px;
+    }
+  
+    .add-reclamation input,
+    .add-reclamation select,
+    .add-reclamation button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

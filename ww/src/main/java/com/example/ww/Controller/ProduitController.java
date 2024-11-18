@@ -48,11 +48,7 @@ public class ProduitController {
         return ResponseEntity.ok(ProduitList);
     }
 
-    @PutMapping("/updateImgs")
-    public ResponseEntity<ImageData> updateImgs(@RequestBody ImageData imageData) {
-        ImageData updatedImageData = dossierMedicalService.modifieImage(imageData);
-        return ResponseEntity.ok(updatedImageData);
-    }
+
     public List<ImageData> uploadImage(MultipartFile[] multipartFiles) throws IOException {
         List<ImageData> imageDatas = new ArrayList<>();
         for (MultipartFile file: multipartFiles) {
@@ -66,6 +62,7 @@ public class ProduitController {
         }
         return imageDatas;
     }
+
 
     @PostMapping(value = "/addproduit", produces = {"text/plain", "application/json"}, consumes = {"multipart/mixed",MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<String> addProduit(
@@ -90,7 +87,11 @@ public class ProduitController {
         }
     }
 
-
+    @PutMapping("/updateImgs")
+    public ResponseEntity<ImageData> updateImgs(@RequestBody ImageData imageData) {
+        ImageData updatedImageData = dossierMedicalService.modifieImage(imageData);
+        return ResponseEntity.ok(updatedImageData);
+    }
 
     @PutMapping(value = "/update", produces = {"text/plain", "application/json"}, consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
     public ResponseEntity<String> updateProduit(

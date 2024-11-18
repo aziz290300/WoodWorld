@@ -18,14 +18,14 @@ import {  CartItem } from 'src/app/models/Produit';  // Assurez-vous que CartIte
 })
 
 export class HeaderComponent implements OnInit {
-  cartItemCount: number = 0;
+  cartItemCount: number = 2;
 
   constructor(private authService: AuthService, private cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {
     // S'abonner au flux des articles du panier
     this.cartService.getCart().subscribe((cartItems: CartItem[]) => {
-      this.cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);  // Calcul du nombre total d'articles
+      this.cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 2);  // Calcul du nombre total d'articles
     });
   }
 

@@ -1,0 +1,40 @@
+.reponse-form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .reponse-form-container h2 {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
+  }
+  
+  .btn-submit {
+    background-color: #28a745;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  

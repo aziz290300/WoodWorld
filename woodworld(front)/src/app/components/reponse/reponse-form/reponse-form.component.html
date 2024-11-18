@@ -1,0 +1,38 @@
+<div class="reponse-form-container">
+    <h2>Ajouter une Réponse</h2>
+  
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="reponsecontent">Votre Réponse :</label>
+        <textarea
+          id="reponsecontent"
+          [(ngModel)]="reponse.reponsecontent"
+          name="reponsecontent"
+          required
+          rows="4"
+          placeholder="Entrez votre réponse ici...">
+        </textarea>
+      </div>
+  
+      <div class="form-group">
+        <label for="datereponse">Date de la Réponse :</label>
+        <input
+          id="datereponse"
+          type="date"
+          [(ngModel)]="reponse.datereponse"
+          name="datereponse"
+          required>
+      </div>
+  
+      <!-- Affichez des détails sur la réclamation si nécessaire -->
+      <div class="form-group">
+        <label for="reclamationDetails">Réclamation :</label>
+        <textarea id="reclamationDetails" [value]="reclamation.description" disabled rows="4"></textarea>
+      </div>
+  
+      <button type="submit" class="btn-submit">Envoyer</button>
+    </form>
+  </div>
+  

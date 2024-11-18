@@ -1,0 +1,72 @@
+/* Conteneur principal */
+.reponse-list-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre */
+  .reponse-list-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Message d'erreur */
+  .error-message {
+    color: #e74c3c;
+    background-color: #f8d7da;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  /* Tableau des réponses */
+  .reponse-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .reponse-table th,
+  .reponse-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  .reponse-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .reponse-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .reponse-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Pas de réponses disponibles */
+  .no-reponses {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  
+  /* Message indiquant qu'il n'y a pas de réponses */
+  .no-reponses p {
+    font-size: 18px;
+    color: #aaa;
+    font-style: italic;
+  }
+  

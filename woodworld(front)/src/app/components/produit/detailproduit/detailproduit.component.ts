@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Produit } from 'src/app/models/Produit';
 import { ProduitserviceService } from 'src/app/services/produitservice.service';
 import { ProcessingImageServiceService } from 'src/app/services/processing-image-service.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-detailproduit',
   templateUrl: './detailproduit.component.html',
@@ -14,6 +14,7 @@ export class DetailproduitComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private produitService: ProduitserviceService,
     private processingImageService: ProcessingImageServiceService
   ) {}
@@ -29,6 +30,11 @@ export class DetailproduitComponent implements OnInit {
           console.error('Erreur lors de la récupération du produit :', error);
         }
       );
+    }
+  }
+  ajouterAuPanier(): void {
+    if (this.produit) {
+      this.router.navigate(['/cart', this.produit.id]);
     }
   }
 }

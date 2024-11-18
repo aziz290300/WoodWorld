@@ -14,6 +14,13 @@ import { DetailproduitComponent } from './components/produit/detailproduit/detai
 
 
 import { CartComponent } from './frontOffice/cart/cart.component';
+import { AddReclamationComponent } from './components/reclamation/add-reclamation/add-reclamation.component';
+import { UpdateReclamationComponent } from './components/reclamation/update-reclamation/update-reclamation.component';
+import { DashboardReclamationComponent } from './components/reclamation/dashboard-reclamation/dashboard-reclamation.component';
+import { ReponseComponent } from './components/reponse/reponse.component';
+import { ReponseFormComponent } from './components/reponse/reponse-form/reponse-form.component';
+import { AnswerlistComponent } from './components/reponse/answerlist/answerlist.component';
+import { ViewReponseComponent } from './components/reclamation/view-reponse/view-reponse.component';
 
 
 const routes: Routes = [
@@ -21,13 +28,17 @@ const routes: Routes = [
   {path:'WoodWorld',component:HomeFrontComponent},
   {path:'', redirectTo :'/WoodWorld', pathMatch:'full'},
 
-  
+  { path: 'add-reclamation', component: AddReclamationComponent },
+  { path: 'update-reclamation/:id', component: UpdateReclamationComponent }, // Récupère l'ID pour l'update
+  { path: 'dashboard-reclamation', component: DashboardReclamationComponent }, // Route pour le dashboard
+  { path: 'view-reponse/:id', component: ViewReponseComponent },  // Route pour voir la réponse
   {path:'produits',component:ProduitComponent},
   { path: 'produit-detail/:id', component: DetailproduitComponent }, 
   {path:'contacts',component:ContactsComponent},
   {path:'login',component:LoginComponent},
   {path:'register',component:RegisterComponent},
   {path:'cart',component:CartComponent},
+  { path: 'cart/:id', component: CartComponent },
 
 
 
@@ -42,7 +53,9 @@ const routes: Routes = [
         path: '',
         component: HomeBackComponent
       },
-
+      { path: 'answerlist', component: AnswerlistComponent },
+      { path: 'reponse-form/:id', component: ReponseFormComponent },
+      { path: 'reponse', component: ReponseComponent },
       {path:'addproduits',component:AddproduitComponent},
       { path: 'upproduits/:id', component: UpdateproduitComponent },
       {path:'produits',component:AdminproduitComponent},

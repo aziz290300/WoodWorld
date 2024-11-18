@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="reponse-list-container">
+    <h2>Liste des Réponses</h2>
+  
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
+    <table class="reponse-table" *ngIf="reponses.length > 0; else noReponses">
+      <thead>
+        <tr>
+          <th>Réclamation</th>
+          <th>Contenu de la réponse</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reponse of reponses">
+          <td>{{ reponse.reclamation.description}}</td>
+          <td>{{ reponse.reponsecontent }}</td>
+          <td>{{ reponse.datereponse | date: 'short' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  
+    <ng-template #noReponses>
+      <p>Aucune réponse disponible.</p>
+    </ng-template>
+  </div>
+  <app-footer></app-footer>
+
+  

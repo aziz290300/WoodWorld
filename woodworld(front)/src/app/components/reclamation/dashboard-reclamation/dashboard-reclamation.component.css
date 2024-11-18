@@ -1,0 +1,112 @@
+/* Conteneur principal pour le tableau des réclamations */
+.dashboard-reclamation {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Titre de la page */
+  .dashboard-reclamation h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  /* Style du tableau */
+  .dashboard-reclamation table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  /* En-têtes du tableau */
+  .dashboard-reclamation th {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  /* Cellules du tableau */
+  .dashboard-reclamation td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Lignes du tableau */
+  .dashboard-reclamation tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  /* Boutons Modifier, Supprimer, Check Réponse */
+  .dashboard-reclamation button {
+    padding: 8px 12px;
+    margin: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Style du bouton Modifier */
+  .dashboard-reclamation button:nth-child(1) {
+    background-color: #ff9800;
+    color: white;
+  }
+  
+  /* Style du bouton Supprimer */
+  .dashboard-reclamation button:nth-child(2) {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  /* Style du bouton Check Réponse */
+  .dashboard-reclamation button:nth-child(3) {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  /* Effet de survol pour les boutons */
+  .dashboard-reclamation button:hover {
+    opacity: 0.9;
+  }
+  
+  /* Footer */
+  app-footer {
+    margin-top: 50px;
+  }
+  
+  /* Responsive pour les petits écrans */
+  @media (max-width: 768px) {
+    .dashboard-reclamation {
+      padding: 15px;
+    }
+  
+    .dashboard-reclamation table {
+      font-size: 12px;
+    }
+  
+    .dashboard-reclamation th,
+    .dashboard-reclamation td {
+      padding: 10px;
+    }
+  
+    .dashboard-reclamation button {
+      font-size: 12px;
+      padding: 6px 10px;
+    }
+  }
+  
